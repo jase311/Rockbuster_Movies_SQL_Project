@@ -1,5 +1,5 @@
 # Rockbuster_Movies_SQL_Project
-SQL Project for a presentation to Rockbuster Stealth Management Board.
+SQL Data Analysis project for a presentation to Rockbuster Stealth Management Board.
 
 # Introduction
 Rockbuster Stealth LLC i s a movie rental company that used to have stores around the world. Facing stiff competition from streaming services such as Netflix and Amazon Prime, the Rockbuster Stealth management team is planning to use i ts existing movie licenses to launch an online video rental service i n order to stay competitive.
@@ -14,7 +14,7 @@ Rockbuster Stealth LLC i s a movie rental company that used to have stores aroun
 # Data
 The data used for this project was created by Career Foundry and contains information about Rockbuster's film inventory, customers, payments, and rentals, among others.
 >[!NOTE]
->There is a folder with the Data Dictionary file for easy reference [Data Dictionary](Rockbuster_Movies_SQL_Project/Data dictionary.pdf).
+>There is a folder with the Data Dictionary file for easy reference: [Data dictionary.pdf](https://github.com/jase311/Rockbuster_Movies_SQL_Project/blob/main/Data%20dictionary.pdf).
 
 # Tools
 The data for this project was analyzed using PostgreSQL and Tableau was used for visualization purposes. The presentation was created using PowerPoint.
@@ -27,4 +27,4 @@ The visualization was created using Tableau.
 # Presentation
 The presentation was created using PowerPoint.
 >[!NOTE]
->Link to the visualization: [Tableau Workbook: Rockbuster in the World](https://public.tableau.com/app/profile/jaime.suarez4491/viz/RockbusterLLC/Rockbusterintheworld).
+>Link to the presentation: [Rockbuster Stealth LLC](https://github.com/jase311/Rockbuster_Movies_SQL_Project).
