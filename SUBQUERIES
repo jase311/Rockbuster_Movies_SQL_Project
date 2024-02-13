@@ -1,0 +1,24 @@
+Here is a SQL query with a subquery:
+
+SELECT  D.country,count(A.customer_id) AS all_customer_count, count(top_5_customers) AS top_customer_count 
+FROM customer A
+LEFT JOIN address B ON A.address_id=B.address_id
+LEFT JOIN city C ON B.city_id=C.city_id
+LEFT JOIN country D ON C.country_id=D.country_id
+LEFT JOIN
+(SELECT A.customer_id, SUM(A.amount) AS "Total paid", B.address_id, B.last_name,
+B.first_name, D.city, E.country
+FROM payment A
+LEFT JOIN customer B ON A.customer_id = B.customer_id
+LEFT JOIN address C ON C.address_id=B.address_id
+LEFT JOIN city D ON D.city_id=C.city_id
+LEFT JOIN country E ON E.country_id = D.country_id
+WHERE city IN ('Aurora', 'Acua','Citrus Heights', 'Iwaki', 'Ambattur','Shanwei',
+			   'So Leopoldo','Teboksary','Tianjin','Cianjur')
+GROUP BY A.customer_id, B.address_id, B.last_name, B.first_name,D.city, E.country
+ORDER BY "Total paid" DESC
+LIMIT 5) AS top_5_customers
+ON A.customer_id=top_5_customers.customer_id
+GROUP BY D.country
+ORDER BY all_customer_count desc
+LIMIT 5
