@@ -14,7 +14,7 @@ Rockbuster Stealth LLC i s a movie rental company that used to have stores aroun
 # Data
 The data used for this project was created by Career Foundry and contains information about Rockbuster's film inventory, customers, payments, and rentals, among others.
 >[!NOTE]
->There is a folder with the Data Dictionary file for easy reference: [Data dictionary.pdf](https://github.com/jase311/Rockbuster_Movies_SQL_Project/blob/main/Data%20dictionary.pdf).
+>There is a file with the Data Dictionary file for easy reference: [Data dictionary.pdf](https://github.com/jase311/Rockbuster_Movies_SQL_Project/blob/main/Data%20dictionary.pdf).
 
 # Tools
 The data for this project was analyzed using PostgreSQL and Tableau was used for visualization purposes. The presentation was created using PowerPoint.
