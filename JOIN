@@ -1,1 +1,32 @@
-# Here are
+Here are some SQL queries with JOIN
+
+SELECT co.country, ca.name, COUNT(i.inventory_id) AS movies
+FROM inventory i
+INNER JOIN store s ON i.store_id=s.store_id
+INNER JOIN address a ON s.address_id=a.address_id
+INNER JOIN city ci ON ci.city_id=a.city_id
+INNER JOIN country co ON co.country_id=ci.country_id
+INNER JOIN film_category fc ON i.film_id=fc.film_id
+INNER JOIN category ca ON fc.category_id=ca.category_id
+GROUP BY co.country, ca.name
+ORDER BY country DESC, movies DESC
+
+SELECT co.country,
+MIN (f.rental_duration) AS min_rental_duration,
+AVG (f.rental_duration) AS average_rental_duration,
+MAX (f.rental_duration) AS max_rental_duration,
+MIN (f.rental_rate) AS min_rental_rate,
+AVG (f.rental_rate) AS average_rental_rate,
+MAX (f.rental_rate) AS max_rental_rate,
+MIN (f.replacement_cost) AS min_replacement_cost,
+AVG (f.rental_rate) AS average_replacement_cost,
+MAX (f.rental_rate) AS max_replacement_cost,
+MODE () WITHIN GROUP (ORDER BY rating) AS rating_mode
+FROM film f
+INNER JOIN inventory i ON i.film_id=f.film_id
+INNER JOIN store s ON i.store_id=s.store_id
+INNER JOIN address a ON s.address_id=a.address_id
+INNER JOIN city ci ON ci.city_id=a.city_id
+INNER JOIN country co ON co.country_id=ci.country_id
+GROUP BY co.country
+
